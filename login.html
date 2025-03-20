@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <script type="module" crossorigin src="/tidytask/assets/login-DXFkxhTo.js"></script>
+    <link rel="modulepreload" crossorigin href="/tidytask/assets/toast-CCRlhVFf.js">
+    <link rel="stylesheet" crossorigin href="/tidytask/assets/toast-DEhTH2i5.css">
+    <link rel="stylesheet" crossorigin href="/tidytask/assets/auth-C3WKLE_5.css">
+  </head>
+  <body>
+    <main class="auth-container">
+      <!-- Left Container -->
+      <div class="left-container">
+        <form class="auth-form">
+          <h1 class="auth-header">Login to your account.</h1>
+
+          <div class="input-container">
+            <label class="input-label" for="username">Username</label>
+            <input
+              name="username"
+              type="text"
+              placeholder="Enter your username"
+              id="username"
+            />
+            <p class="input-error-message" id="username-error"></p>
+          </div>
+
+          <div class="input-container">
+            <label class="input-label" for="password">Password</label>
+            <input
+              name="password"
+              type="password"
+              placeholder="Enter your password"
+              id="password"
+            />
+            <p class="input-error-message" id="password-error"></p>
+          </div>
+
+          <div class="auth-footer">
+            <button class="btn w-full" id="login-button">Log in</button>
+            <span class="text-muted">
+              Don't have an account?
+              <a href="signup" class="text-primary underline">Sign up</a>
+            </span>
+          </div>
+        </form>
+      </div>
+
+      <!-- Right Container -->
+      <div class="right-container">
+        <img
+          src="/tidytask/assets/auth-MPcgqKEt.png"
+          class="h-screen w-full object-cover"
+        />
+      </div>
+    </main>
+
+    <script src="assets/js/auth/isAuthenticated.js"></script>
+  </body>
+</html>

@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🧼 TidyTasks</title>
+    <script type="module" crossorigin src="/tidytask/assets/index-DslO16yH.js"></script>
+    <link rel="modulepreload" crossorigin href="/tidytask/assets/toast-CCRlhVFf.js">
+    <link rel="modulepreload" crossorigin href="/tidytask/assets/todo-B4VG5EOB.js">
+    <link rel="stylesheet" crossorigin href="/tidytask/assets/toast-DEhTH2i5.css">
+  </head>
+  <body>
+    <div class="flex h-screen w-full items-center justify-center" id="loader">
+      <span class="animate-bounce text-4xl">🧼</span>
+    </div>
+
+    <main id="main-container" class="hidden">
+      <div class="overlay">
+        <!-- Add Todo Modal -->
+        <div id="add-todo-modal" class="card relative hidden w-full max-w-sm">
+          <button class="btn btn-icon absolute top-2 right-2" data-close-modal>
+            <i data-lucide="x" class="size-4"></i>
+          </button>
+          <h1 class="font-semibold">Add To Do</h1>
+
+          <form class="mt-4 space-y-2" id="add-todo-form">
+            <div class="input-container">
+              <label class="input-label" for="title">Title</label>
+              <input
+                name="title"
+                type="text"
+                placeholder="Enter title"
+                id="add-title"
+              />
+              <p class="input-error-message" id="title-error"></p>
+            </div>
+            <div class="input-container">
+              <label class="input-label" for="category">Category</label>
+              <input
+                name="category"
+                type="text"
+                placeholder="Enter category"
+                id="add-category"
+              />
+            </div>
+            <button class="btn modal-button" id="add-submit-button">Add</button>
+          </form>
+        </div>
+
+        <!-- Edit Todo Modal -->
+        <div id="edit-todo-modal" class="card relative hidden w-full max-w-sm">
+          <button class="btn btn-icon absolute top-2 right-2" data-close-modal>
+            <i data-lucide="x" class="size-4"></i>
+          </button>
+          <h1 class="font-semibold">Edit To Do</h1>
+
+          <form class="mt-4 space-y-2" id="edit-todo-form">
+            <div class="input-container">
+              <label class="input-label" for="title">Title</label>
+              <input
+                name="title"
+                type="text"
+                placeholder="Enter title"
+                id="edit-title"
+              />
+              <p class="input-error-message" id="edit-title-error"></p>
+            </div>
+            <div class="input-container">
+              <label class="input-label" for="category">Category</label>
+              <input
+                name="category"
+                type="text"
+                placeholder="Enter category"
+                id="edit-category"
+              />
+            </div>
+            <button class="btn modal-button" id="edit-submit-button">
+              Edit
+            </button>
+          </form>
+        </div>
+
+        <!-- Delete Todo Modal -->
+        <div
+          id="delete-todo-modal"
+          class="card relative hidden w-full max-w-sm"
+        >
+          <h1 class="font-semibold">Are you sure you want to continue?</h1>
+
+          <p class="text-muted text-sm">
+            This will permanently delete this todo.
+          </p>
+
+          <div class="mt-4 flex justify-end gap-2">
+            <button class="btn btn-ghost" data-close-modal>Cancel</button>
+
+            <button class="btn btn-destructive" id="delete-submit-button">
+              Delete
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <header class="header">
+        <div class="fluid-container header-container">
+          <a href="/">
+            <h1 class="text-2xl font-black">🧼 TidyTasks</h1>
+          </a>
+
+          <span class="profile-dropdown-btn-container">
+            <button class="profile-dropdown-btn" id="profile-dropdown-btn">
+              <span id="current-user-avatar-container"></span>
+            </button>
+
+            <div class="profile-dropdown-container">
+              <div class="profile-dropdown-header">
+                <span id="current-user-avatar-container"> </span>
+                <div class="user-container">
+                  <span class="username" id="current-user-username"></span>
+                  <span class="join-date" id="current-user-join-date"
+                    >Joined 7th March 2025</span
+                  >
+                </div>
+              </div>
+
+              <div class="profile-dropdown-item">
+                <a
+                  href="categories"
+                  class="btn btn-ghost profile-dropdown-item-btn"
+                >
+                  <i data-lucide="shapes" class="icon"></i>
+                  Categories
+                </a>
+              </div>
+
+              <div class="profile-dropdown-item">
+                <button
+                  class="btn btn-ghost-destructive profile-dropdown-item-btn"
+                  id="logout-button"
+                >
+                  <i data-lucide="log-out" class="icon"></i>
+                  <p>Logout</p>
+                </button>
+              </div>
+            </div>
+          </span>
+        </div>
+      </header>
+
+      <section class="fluid-container py-8">
+        <div class="max-md:px-2">
+          <div>
+            <p>Hi, <span id="current-user-name"></span> 👋</p>
+            <h1 class="text-xl font-medium">Manage your daily tasks.</h1>
+          </div>
+        </div>
+
+        <div class="flex items-end justify-between max-md:px-2">
+          <h1 class="text-lg font-medium">All Todos</h1>
+
+          <button
+            class="btn btn-ghost mt-4 ml-auto"
+            id="add-todo-modal-open-button"
+          >
+            <i data-lucide="plus" class="text-green-500"></i>
+            <span>Add Todo</span>
+          </button>
+        </div>
+
+        <div class="mt-2" id="tasks-container"></div>
+      </section>
+    </main>
+
+
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>
