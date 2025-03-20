@@ -1,0 +1,24 @@
+@theme {
+  --font-rubik: "Rubik", sans-serif;
+
+  --color-primary: oklch(18.39% 0.0052 219.75);
+  --color-border: oklch(0.928 0.006 264.531);
+  --color-muted: oklch(55.19% 0.0137 285.94);
+  --color-destructive: oklch(63.68% 0.2078 25.33);
+  --color-destructive-light: oklch(91.47% 0.0423 25.33);
+  --color-hover: #f3f4f6;
+  --color-ring: oklch(21.03% 0.0059 285.88);
+  --color-overlay: rgba(0, 0, 0, 0.5);
+
+  --ease-snappy: cubic-bezier(0.2, 0, 0, 1);
+
+  --animate-fade-in: fade-in 0.3s ease-out;
+  --animate-fade-in-from-top: fadeInFromTop 0.3s ease-out;
+  --animate-fade-out-to-top: fadeOutToTop 0.3s ease-out;
+  --animate-accordion-up: accordionUp 0.3s ease-out;
+  --animate-accordion-down: accordionDown 0.3s ease-out;
+  --animate-rotate: rotate 0.3s ease-out;
+  --animate-re-rotate: reRotate 0.3s ease-out;
+  --animate-fade-in: fadeIn 0.3s ease-out;
+  --animate-fade-out: fadeOut 0.3s ease-out;
+}

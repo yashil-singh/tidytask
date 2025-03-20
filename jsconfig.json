@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@js/*": ["./src/assets/js/*"],
+      "@controllers/*": ["./server/controllers/*"]
+    }
+  }
+}

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="./assets/css/auth.css" />
+  </head>
+  <body>
+    <main class="auth-container">
+      <!-- Left Container -->
+      <div class="left-container">
+        <form class="auth-form">
+          <h1 class="auth-header">Login to your account.</h1>
+
+          <div class="input-container">
+            <label class="input-label" for="username">Username</label>
+            <input
+              name="username"
+              type="text"
+              placeholder="Enter your username"
+              id="username"
+            />
+            <p class="input-error-message" id="username-error"></p>
+          </div>
+
+          <div class="input-container">
+            <label class="input-label" for="password">Password</label>
+            <input
+              name="password"
+              type="password"
+              placeholder="Enter your password"
+              id="password"
+            />
+            <p class="input-error-message" id="password-error"></p>
+          </div>
+
+          <div class="auth-footer">
+            <button class="btn w-full" id="login-button">Log in</button>
+            <span class="text-muted">
+              Don't have an account?
+              <a href="signup" class="text-primary underline">Sign up</a>
+            </span>
+          </div>
+        </form>
+      </div>
+
+      <!-- Right Container -->
+      <div class="right-container">
+        <img
+          src="assets/images/auth.png"
+          class="h-screen w-full object-cover"
+        />
+      </div>
+    </main>
+
+    <script src="assets/js/auth/isAuthenticated.js"></script>
+    <script type="module" src="assets/js/auth/login.js"></script>
+  </body>
+</html>

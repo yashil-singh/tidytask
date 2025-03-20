@@ -1,0 +1,59 @@
+.header {
+  @apply border-border bg-primary sticky top-0 w-full border-b p-4 text-white;
+}
+
+.header-container {
+  @apply flex items-center justify-between;
+}
+
+.profile-dropdown-btn-container {
+  @apply relative flex;
+}
+
+.profile-dropdown-btn {
+  @apply ring-hover size-10 rounded-full bg-[url(https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541)] bg-contain;
+}
+
+.avatar {
+  @apply size-10 rounded-full;
+}
+
+.profile-dropdown-container {
+  @apply border-border absolute top-[110%] right-0 z-30 hidden w-64 rounded-xl border bg-white px-4;
+}
+
+.profile-dropdown-container.active {
+  @apply animate-fade-in-from-top block;
+}
+
+.profile-dropdown-container.closing {
+  @apply animate-fade-out-to-top;
+}
+
+.profile-dropdown-header {
+  @apply border-border flex items-center gap-2 border-b py-4;
+}
+
+.profile-dropdown-item {
+  @apply border-border flex flex-col items-center gap-2 border-b py-2 last:border-0 last:pb-4;
+}
+
+.profile-dropdown-item-btn {
+  @apply w-full justify-start no-underline;
+}
+
+.profile-dropdown-item-btn.icon {
+  @apply size-5;
+}
+
+.user-container {
+  @apply flex flex-col;
+}
+
+.user-container .username {
+  @apply font-medium text-black!;
+}
+
+.user-container .join-date {
+  @apply text-muted text-sm;
+}

@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+.auth-container {
+  @apply flex h-screen;
+}
+
+.left-container {
+  @apply flex w-full items-center justify-center p-4 lg:w-[40%];
+}
+
+.right-container {
+  @apply hidden flex-1 items-center md:flex;
+}
+
+.auth-header {
+  @apply mb-4 text-center text-xl font-bold;
+}
+
+.auth-form {
+  @apply flex w-full max-w-md flex-col gap-2;
+}
+
+.input-container {
+  @apply flex flex-col gap-1;
+}
+
+.input-label {
+  @apply text-sm font-medium;
+}
+
+.auth-footer {
+  @apply mt-2 space-y-2 text-center;
+}
